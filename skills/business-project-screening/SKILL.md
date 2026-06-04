@@ -60,6 +60,8 @@ Flag high-risk shapes early: hardware, two-sided platforms, broad social product
 
 Use `references/framework.md` when the project is nontrivial or when the user asks for scoring details.
 
+For one-person companies, vibe coding, AI-generated SaaS, micro-SaaS, or tool-first product ideas, use `references/framework.md` as the base screening model and also use `references/solo-vibe-coding-project-screening.md` as a supplementary one-person execution lens. The supplementary reference does not replace the red-yellow-green model; it adds the quadrant, 7 standards, and manual-paid-validation checks to avoid premature product building.
+
 - Red lights: reasons to stop or avoid building.
 - Yellow lights: reasons to shrink the idea before validating.
 - Green lights: reasons to run a 3-7 day experiment.
@@ -139,4 +141,3 @@ For quick replies, still include:
 - Stop condition
 
 Keep the tone direct, sober, and useful.
-
