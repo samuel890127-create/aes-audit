@@ -58,22 +58,22 @@ Use $business-project-screening to judge whether this business idea is worth doi
 {your idea}
 ```
 
-You can also use slash-style trigger text:
+You can also use plain trigger phrases. These are not Codex slash commands; write them as normal text in your message:
 
 ```text
-/AESAudit
+AESAudit
 My project is: {your idea}
 ```
 
 Chinese trigger examples:
 
 ```text
-/项目审查
+项目审查
 我的项目是：给餐饮门店做自动炒菜机器人
 ```
 
 ```text
-/商业筛选
+商业筛选
 我的项目是：给初次创业小白提供项目筛选 Skill
 ```
 
@@ -100,7 +100,7 @@ The Skill returns:
 Input:
 
 ```text
-/AESAudit
+$business-project-screening
 My project is: a mobile dessert cart in Beijing parks and markets, selling zongzi ice cream.
 ```
 

@@ -1,5 +1,4 @@
 interface:
   display_name: "AES Audit"
   short_description: "用一人公司约束筛选商业项目机会"
-  default_prompt: "Use $business-project-screening, or type /AESAudit, to judge whether this business idea is worth doing."
-
+  default_prompt: "Use $business-project-screening to judge whether this business idea is worth doing."

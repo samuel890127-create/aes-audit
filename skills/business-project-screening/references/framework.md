@@ -1,5 +1,53 @@
 # Business Project Screening Framework
 
+## How The Traffic-Light Logic Works
+
+Use red/yellow/green lights together, not as three separate scores.
+
+1. Count red lights first. Red lights are hard risks.
+   - 3 or more red lights: default to `stop`.
+   - 1-2 red lights: default to `pause`, unless strong evidence offsets them.
+   - 0 red lights: continue to yellow and green checks.
+2. Use yellow lights to decide what must be shrunk.
+   - Yellow lights do not mean the project is bad.
+   - They identify the part that is too broad, too unclear, too heavy, or too untested.
+3. Use green lights only to justify a small validation.
+   - Green lights do not mean “build the full product.”
+   - They mean the project deserves a 3-7 day test that can produce payment, rejection, deposit, appointment, or another high-intent signal.
+4. Final conclusion still depends on the full picture:
+   - `continue`: small paid validation is justified.
+   - `pause`: shrink the project before testing.
+   - `stop`: do not continue in the current shape.
+
+## Count-To-Decision Mapping
+
+Use this mapping as the default decision rule. Red lights have priority over yellow and green lights.
+
+| Counts | Default conclusion | Meaning |
+|---|---|---|
+| Red >= 3 | `stop` | The current shape has too many hard risks. Do not continue without redefining the project. |
+| Red 1-2 | `pause` | There are hard risks. Shrink or change the project before testing, unless strong evidence offsets them. |
+| Red 0 + Yellow >= 5 | `pause` | No fatal hard risk, but the project is too broad, heavy, or unclear. Shrink aggressively. |
+| Red 0 + Yellow 3-4 | `pause` | Testable only after narrowing user, scene, offer, price, or delivery. |
+| Red 0 + Yellow 1-2 + Green >= 3 | `continue` | A small 3-7 day paid validation is justified. Do not build the full product yet. |
+| Red 0 + Yellow 0 + Green >= 3 | `continue` | Strongest early-stage case, but still start with paid validation. |
+| Green 0 | `pause` or `stop` | There is no positive validation basis. If red/yellow lights are also high, default to `stop`. |
+
+When counts conflict, follow this priority:
+
+```text
+red count -> yellow count -> green count -> final conclusion
+```
+
+Always show the count of each light in the output, for example:
+
+```text
+Red lights（红灯）: 3
+Yellow lights（黄灯）: 4
+Green lights（绿灯）: 2
+Count-to-decision（数量判定）: Red >= 3, so default conclusion is stop.
+```
+
 ## Red Lights
 
 If 3 or more red lights appear, default to `stop`. If 1-2 appear, default to `pause` unless strong facts offset them.
@@ -140,4 +188,3 @@ Common forms:
 - Local information product: who maintains freshness is the core question.
 - Agent product: sell workflow ROI, not agent novelty.
 - Skill product: sell immediate judgment or output, not AI capability.
-
