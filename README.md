@@ -18,6 +18,8 @@ AES Audit reviews a business idea through:
 - fastest validation action
 - stop conditions
 
+For one-person company, vibe coding, AI SaaS, micro-SaaS, and tool-first product ideas, it also applies a supplementary one-person execution lens: demand strength × one-person deliverability.
+
 ## Best For
 
 - one-person company ideas
@@ -75,6 +77,10 @@ Chinese trigger examples:
 我的项目是：给初次创业小白提供项目筛选 Skill
 ```
 
+For first-time users, see [AES Audit 新手使用文档](docs/beginner-usage-guide.md).
+
+For the latest usability check, see [Skill 可用性测试报告](docs/skill-usability-test-2026-06-05.md).
+
 ## Output
 
 The Skill returns:
@@ -123,6 +129,9 @@ Stop if compliant entry is unclear, unit economics are weak, or fewer than 10 ou
 aes-audit/
 ├── README.md
 ├── LICENSE
+├── docs/
+│   ├── beginner-usage-guide.md
+│   └── skill-usability-test-2026-06-05.md
 └── skills/
     └── business-project-screening/
         ├── SKILL.md
@@ -130,10 +139,10 @@ aes-audit/
         │   └── openai.yaml
         └── references/
             ├── framework.md
+            ├── solo-vibe-coding-project-screening.md
             └── templates.md
 ```
 
 ## License
 
 MIT License.
-
